@@ -1,0 +1,74 @@
+***********************************************************************************************************************
+
+18:48:45.723 [http-nio-6065-exec-2] DEBUG o.s.w.t.h.WebServiceMessageReceiverHandlerAdapter - Accepting incoming [org.springframework.ws.transport.http.HttpServletConnection@3e419811] at [http://localhost:6065/ExternalDmService/1.0]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.w.server.MessageTracing.received - Received request [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigs]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.w.s.e.m.PayloadRootAnnotationMethodEndpointMapping - Looking up endpoint for [{http://dm.xml.soap.sample.com/}queryEmpConfigs]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.w.s.server.SoapMessageDispatcher - Endpoint mapping [org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping@33a88dbe] maps request to endpoint [public com.sample.soap.xml.dm.QueryEmpConfigsResponse com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceController.queryEmpConfigs(com.sample.soap.xml.dm.QueryEmpConfigs,org.springframework.ws.context.MessageContext) throws java.lang.Exception]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.w.s.server.SoapMessageDispatcher - Testing endpoint adapter [org.springframework.ws.server.endpoint.adapter.DefaultMethodEndpointAdapter@50d6695e]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.w.s.e.a.m.j.XmlRootElementPayloadMethodProcessor - Unmarshalled payload request to [com.sample.soap.xml.dm.QueryEmpConfigs@42dbd4a7]
+18:48:45.730 [http-nio-6065-exec-2] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'DmSoapServiceController'
+18:48:45.730 [http-nio-6065-exec-2] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of queryCustomer com.sample.soap.xml.dm.QueryEmpConfigs@42dbd4a7
+18:48:45.731 [http-nio-6065-exec-2] DEBUG c.e.s.b.rest.service.DmServiceImpl - MyServiceImpl::queryEmpConfigs  id : 1
+18:48:45.731 [http-nio-6065-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+18:48:45.753 [http-nio-6065-exec-2] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+18:48:45.753 [http-nio-6065-exec-2] DEBUG c.e.s.boot.rest.dao.DmDbServiceImpl -  Query for queryEmpConfigs : select * from employee where id = ?
+18:48:45.753 [http-nio-6065-exec-2] INFO  c.e.s.b.r.h.SingleSelectDmCustomerHandler - External SpringBootSoapServiceDemo calling ...... 
+18:48:45.754 [http-nio-6065-exec-2] DEBUG c.e.s.b.s.c.MathsCalculatorServiceConnector - Request received for sum method: com.uhc.ubh.arithmatic.calculation.Sum@596141c1
+18:48:45.754 [http-nio-6065-exec-2] DEBUG c.e.s.boot.soap.connector.SoapClient - Opening [org.springframework.ws.transport.http.HttpComponentsConnection@6b52cbec] to [http://localhost:8090/MathsCalculator/1.0.wsdl]
+18:48:45.756 [http-nio-6065-exec-2] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: default
+18:48:45.756 [http-nio-6065-exec-2] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+18:48:45.756 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {}->http://localhost:8090][total kept alive: 0; route allocated: 0 of 20; total allocated: 0 of 80]
+18:48:45.756 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {}->http://localhost:8090][total kept alive: 0; route allocated: 1 of 20; total allocated: 1 of 80]
+18:48:45.756 [http-nio-6065-exec-2] DEBUG o.a.h.impl.execchain.MainClientExec - Opening connection {}->http://localhost:8090
+18:48:45.768 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connecting to localhost/127.0.0.1:8090
+18:48:45.769 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connection established 127.0.0.1:61175<->127.0.0.1:8090
+18:48:45.769 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 10000
+18:48:45.770 [http-nio-6065-exec-2] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request POST /MathsCalculator/1.0.wsdl HTTP/1.1
+18:48:45.770 [http-nio-6065-exec-2] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+18:48:45.770 [http-nio-6065-exec-2] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> POST /MathsCalculator/1.0.wsdl HTTP/1.1
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> SOAPAction: ""
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Type: text/xml; charset=utf-8
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Content-Length: 245
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: localhost:8090
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)
+18:48:45.771 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "POST /MathsCalculator/1.0.wsdl HTTP/1.1[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "SOAPAction: ""[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Type: text/xml; charset=utf-8[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Content-Length: 245[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: localhost:8090[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)[\r][\n]"
+18:48:45.772 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+18:48:45.773 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 >> "<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:sum xmlns:ns3="http://arithmatic.ubh.uhc.com/calculation/"><in0>1</in0><in1>4</in1></ns3:sum></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+18:48:45.966 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+18:48:45.966 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2[\r][\n]"
+18:48:45.966 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "SOAPAction: ""[\r][\n]"
+18:48:45.967 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: text/xml;charset=utf-8[\r][\n]"
+18:48:45.967 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 249[\r][\n]"
+18:48:45.967 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Wed, 09 Aug 2017 13:18:45 GMT[\r][\n]"
+18:48:45.967 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+18:48:45.967 [http-nio-6065-exec-2] DEBUG org.apache.http.wire - http-outgoing-1 << "<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:sumResponse xmlns:ns3="http://arithmatic.ubh.uhc.com/calculation/"><out>5</out></ns3:sumResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << SOAPAction: ""
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: text/xml;charset=utf-8
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Length: 249
+18:48:45.970 [http-nio-6065-exec-2] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Wed, 09 Aug 2017 13:18:45 GMT
+18:48:45.975 [http-nio-6065-exec-2] DEBUG o.a.h.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+18:48:45.978 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection [id: 1][route: {}->http://localhost:8090] can be kept alive indefinitely
+18:48:45.978 [http-nio-6065-exec-2] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {}->http://localhost:8090][total kept alive: 1; route allocated: 1 of 20; total allocated: 1 of 80]
+18:48:45.981 [http-nio-6065-exec-2] DEBUG c.e.s.b.s.c.MathsCalculatorServiceConnector - Response send for sum method : com.uhc.ubh.arithmatic.calculation.SumResponse@38397b96
+sumResponse of SpringBootSoapServiceDemo com.uhc.ubh.arithmatic.calculation.SumResponse@38397b96
+18:48:45.981 [http-nio-6065-exec-2] INFO  c.e.s.b.r.h.SingleSelectDmCustomerHandler - printing response of external SpringBootSoapServiceDemo ...... 5
+18:48:45.981 [http-nio-6065-exec-2] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+18:48:45.982 [http-nio-6065-exec-2] DEBUG o.s.w.s.e.a.m.j.XmlRootElementPayloadMethodProcessor - Marshalling [com.sample.soap.xml.dm.QueryEmpConfigsResponse@3698f168] to response payload
+18:48:45.998 [http-nio-6065-exec-2] DEBUG o.s.ws.server.MessageTracing.sent - Sent response [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigsResponse] for request [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigs]
+18:48:46.003 [http-nio-6065-exec-2] DEBUG o.s.w.t.h.MessageDispatcherServlet - Successfully completed request
+
+***********************************************************************************************************************

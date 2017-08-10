@@ -1,0 +1,312 @@
+***********************************************************************************************************************
+
+D:\project\development\SpringBootExternalWebService>gradle pitest
+> Configuring > 0/1 projects >Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:compileJava
+Processing of C:\Users\mlahariya\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\1.0.4\a82e1ddd2d795616ac58d73ed246b8ec65326dfa\pl
+exus-utils-1.0.4.pom failed:
+'build.plugins.plugin.version' for io.spring.gradle.dependencymanagement.org.apache.maven.plugins:maven-surefire-plugin must be a valid version bu
+t is 'RELEASE'. in org.codehaus.plexus:plexus-utils:1.0.4
+:compileJava UP-TO-DATE
+:processResources
+:classes
+:compileTestJava
+:processTestResources UP-TO-DATE
+:testClasses
+> Building 85% > :pitest
+ method=queryEmpConfigs, methodDesc=(Lcom/sample/soap/xml/dm/QueryEmpConfigs;Lorg/springframework/ws/context/MessageContext;)Lcom/sample/soap/xml/dm/Q
+ueryEmpConfigsResponse;], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator] KILLED by com.example.spring.boot.soa
+p.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceCont
+rollerTest)
+6:31:25 PM PIT >> FINE : Running 1 units
+stdout  : 18:31:25.484 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@7d74c2b9
+6:31:25 PM PIT >> FINE : processed mutation in 40 ms.
+stdout  : 18:31:25.484 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=comstderr  : .example.spring.boot.soap.controller.SpringBootExternalSoa
+pServiceController, method=queryEmpConfigs, methodDesc=(Lcom/sample/soap/xml/dm/QueryEmpConfigs;Lorg/springframework/ws/context/MessageContext;)Lcom/s
+ample/soap/xml/dm/QueryEmpConfigsResponse;], indstderr  : exes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator] detected
+ = KILLED by com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spring.boot.soap.cont
+roller.SpringBstderr  : ootExternalSoapServiceControllerTest)
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=[1], mutator=org.pi
+test.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] KILLED by com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControl
+lerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)
+6:31:25 PM PIT >> FINE : processed mutation in 26 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.Spr
+ingBootExternalSoapServstderr  : iceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/ty
+pes/EmpDetails;)V], indexes=[2], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filename=SpringBootExternalstderr  : S
+oapServiceResponseMapper.java, block=8, lineNumber=50, description=removed call to com/sample/soap/xml/dm/EmpDetails::setLastName, testsInOrder=[com.e
+xample.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testSelectAllEmpAllData(costderr  : m.example.spring.boot.soap.controll
+er.SpringBootExternalSoapServiceControllerTest), com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfi
+gs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServicstderr  : eControllerTest)]]
+6:31:25 PM PIT >> FINE : Exit code was - OK
+6:31:25 PM PIT >> FINE : mutating method setDetails
+6:31:25 PM PIT >> FINE : Slave exited ok
+stdout  : 18:31:25.516 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@5642d202
+stdout  : 18:31:25.516 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+6:31:25 PM PIT >> FINE : 2 relevant test for setDetails
+stdout  : 18:31:25.520 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@449753cf
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=[0], mutator=org.pi
+test.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] SURVIVED
+6:31:25 PM PIT >> FINE : replaced class with mutant in 8 ms
+stdout  : 18:31:25.521 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE stderr  : : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceRe
+sponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/sstderr  : pring/boot/rest/types/EmpDetails;)V], indexes=
+[2], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = KILLED by com.example.spring.boot.soap.controller.Spring
+BootExternalSoapServiceControllerTest.testSelectAllEmpAllDatstderr  : a(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControlle
+rTest)
+6:31:25 PM PIT >> FINE : processed mutation in 20 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.exstderr  : ample.spring.boot.soap.cont
+roller.SpringBootExternalSoapServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/ty
+pes/EmpDetails;)V], indexes=[1], mutator=org.pitest.mutationtest.engine.gregor.stderr  : mutators.VoidMethodCallMutator], filename=SpringBootExternalS
+oapServiceResponseMapper.java, block=8, lineNumber=49, description=removed call to com/sample/soap/xml/dm/EmpDetails::setFirstName, testsInOrder=[com.
+example.spring.boot.soap.controller.SpringBoostderr  : tExternalSoapServiceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.control
+ler.SpringBootExternalSoapServiceControllerTest), com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConf
+igs(com.exastderr  : mple.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+6:31:25 PM PIT >> FINE : mutating method setDetails
+6:31:25 PM PIT >> FINE : 2 relevant test for setDetails
+6:31:25 PM PIT >> FINE : replaced class with mutant in 10 ms
+6:3stderr  : 1:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceRe
+sponseMapper, method=setDetails,stderr  :  methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=
+[1], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = KILLED by com.example.spring.boot.soap.controller.Sprist
+derr  : ngBootExternalSoapServiceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControlle
+rTest)
+6:31:25 PM PIT >> FINE : processed mutation in 26 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDstderr  : etails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.cont
+roller.SpringBootExternalSoapServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/ty
+pes/EmpDetails;)Vstderr  : ], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filename=SpringBootExternalS
+oapServiceResponseMapper.java, block=8, lineNumber=48, description=removed call to com/sample/soap/xml/dm/EmpDetails::setId, testsInOstderr  : rder=[c
+om.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.Spr
+ingBootExternalSoapServiceControllerTest), com.example.spring.boot.soap.controller.SpringBootExternstderr  : alSoapServiceControllerTest.testQueryEmpC
+onfigs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=mapQueryEmpConfigsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;)Lcom/sample/soap/xml/dm/QueryEmpConfigsRespons
+e;], indexes=[1], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] KILLED by com.example.spring.boot.soap.controller.Spri
+ngBootExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)
+stdout  : 18:31:25.567 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@1af9908b
+6:31:25 PM PIT >> FINE : mutating method setDetails
+stdout  : 18:31:25.567 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : 2 relevant test for setDetails
+stdout  : 18:31:25.597 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@20b1321c
+6:31:25 PMstderr  :  PIT >> FINE : replaced class with mutant in 8 ms
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=mapQueryEmpConfigsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;)Lcom/sample/soap/xml/dm/QueryEmpConfigsRespons
+e;], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator] KILLED by com.example.spring.boot.soap.controller.SpringBo
+otExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)
+stdout  : 18:31:25.597 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBoostderr  : tExternalSoa
+pServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=
+[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = stderr  : SURVIVED
+6:31:25 PM PIT >> FINE : processed mutation in 31 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.Spr
+ingBootExternalSoapServiceResponseMapper,stderr  :  method=mapQueryEmpConfigsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;
+)Lcom/sample/soap/xml/dm/QueryEmpConfigsResponse;], indexes=[1], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filena
+me=Spristderr  : ngBootExternalSoapServiceResponseMapper.java, block=2, lineNumber=23, description=removed call to com/sample/soap/xml/dm/QueryEmpConf
+igsResponse::setReturn, testsInOrder=[com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.tstderr  : estQueryEmpConfig
+s(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+6:31:25 PM PIT >> FINE : mutating method mapQueryEmpConfigsSoapResponse
+stderr  :  PIT >> FINE : 1 relevant test for mapQueryEmpConfigsSoapResponse
+6:31:25 PM PIT >> FINE : replaced class with mutant in 8 ms
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controllestderr  : r.SpringBootExternalSoa
+pServiceResponseMapper, method=mapQueryEmpConfigsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;)Lcom/sample/soap/xml/dm/Que
+ryEmpConfigsResponse;], indexes=[1], mutator=org.pitest.mutationtest.engine.gregor.stderr  : mutators.VoidMethodCallMutator] detected = KILLED by com.
+example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spring.boot.soap.controller.SpringBoot
+ExternalSoapServiceControllerTest)
+6:31:25 PM PIstderr  : T >> FINE : processed mutation in 25 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.Spr
+ingBootExternalSoapServiceResponseMapper, method=mapQueryEmpConfstderr  : igsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;
+)Lcom/sample/soap/xml/dm/QueryEmpConfigsResponse;], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator], filename=S
+pringBootExternalSoapServiceRestderr  : sponseMapper.java, block=2, lineNumber=25, description=mutated return of Object value for com/example/spring/b
+oot/soap/controller/SpringBootExternalSoapServiceResponseMapper::mapQueryEmpConfigsSoapResponse to ( if (x != null) null else throw new RuntimeExcstde
+rr  : eption ), testsInOrder=[com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs(com.example.spri
+ng.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+stdout  : 18:31:25.627 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@23c60d1f
+stdout  : 18:31:25.628 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+6:31:25 PM PIT >> FINE : mutating methodstderr  :  mapQueryEmpConfigsSoapResponse
+6:31:25 PM PIT >> FINE : 1 relevant test for mapQueryEmpConfigsSoapResponse
+6:31:25 PM PIT >> FINE : replaced class with mutant in 8 ms
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=mapSelectAllEmpAllDataSoapResponse, methodDesc=(Ljava/util/List;)Lcom/sample/soap/xml/dm/SelectAllEmpAllDataResponse;], indexes=[0], mutat
+or=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] KILLED by com.example.spring.boot.soap.controller.SpringBootExternalSoapServi
+ceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 stderr  : PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoa
+pServiceResponseMapper, method=mapQueryEmpConfigsSoapResponse, methodDesc=(Lcom/example/spring/boot/rest/types/EmpDetails;)Lstderr  : com/sample/soap/
+xml/dm/QueryEmpConfigsResponse;], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator] detected = KILLED by com.exam
+ple.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpCostderr  : nfigs(com.example.spring.boot.soap.controller.Spri
+ngBootExternalSoapServiceControllerTest)
+6:31:25 PM PIT >> FINE : processed mutation in 31 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=costderr  : m.example.spring.boot.soap.cont
+roller.SpringBootExternalSoapServiceResponseMapper, method=mapSelectAllEmpAllDataSoapResponse, methodDesc=(Ljava/util/List;)Lcom/sample/soap/xml/dm/Se
+lectAllEmpAllDataResponse;], indexes=[0], mutator=org.pitest.mutationtest.estderr  : ngine.gregor.mutators.VoidMethodCallMutator], filename=SpringBoot
+ExternalSoapServiceResponseMapper.java, block=6, lineNumber=38, description=removed call to com/example/spring/boot/soap/controller/SpringBootExternal
+SoapServiceResponseMapper::setDetails, testderr  : stsInOrder=[com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.tes
+tSelectAllEmpAllData(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+stdout  : 18:31:25.651 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@2bbdfd09
+stdout  : 18:31:25.651 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+stdout  : 18:31:25.655 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@38dead04
+stdout  : 18:31:25.656 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : mutating method mapSelestderr  : ctAllEmpAllDataSoapResponse
+6:31:25 PM PIT >> FINE : 1 relevant test for mapSelectAllEmpAllDataSoapResponse
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=[6], mutator=org.pi
+test.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] SURVIVED
+6:31:25 PM PIT >> FINE : replaced class with mutant in 7 ms
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 stderr  : PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoa
+pServiceResponseMapper, method=mapSelectAllEmpAllDataSoapResponse, methodDesc=(Ljava/util/List;)Lcom/sample/soap/xml/dm/Selestderr  : ctAllEmpAllDataR
+esponse;], indexes=[0], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = KILLED by com.example.spring.boot.soa
+p.controller.SpringBootExternalSoapServiceControllerTest.testSelectAllEmpAllData(com.exampstderr  : le.spring.boot.soap.controller.SpringBootExternalS
+oapServiceControllerTest)
+6:31:25 PM PIT >> FINE : processed mutation in 22 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.sprinstderr  : g.boot.soap.cont
+roller.SpringBootExternalSoapServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/ty
+pes/EmpDetails;)V], indexes=[6], mutator=org.pitest.mutationtest.engine.gregor.mutators.Vostderr  : idMethodCallMutator], filename=SpringBootExternalS
+oapServiceResponseMapper.java, block=8, lineNumber=54, description=removed call to com/sample/soap/xml/dm/EmpDetails::setMobile, testsInOrder=[com.exa
+mple.spring.boot.soap.controller.SpringBootExternalSoapSstderr  : erviceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller
+.SpringBootExternalSoapServiceControllerTest), com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs
+(com.example.spring.bostderr  : ot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+stdout  : 18:31:25.680 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@2a63c102
+stdout  : 18:31:25.681 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+6:31:25 PM PIT >> FINE : mutating method setDetails
+18:31:25.684 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Ofstdout  :  queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@4a9f926e
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=[5], mutator=org.pi
+test.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] SURVIVED
+18:31:25.685 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : 2 relevant test for setDetails
+6:31:25 PM PIT >> FINE : replaced class with mutant in 7 ms
+6:31:25 PM PIT >> stderr  : FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceRe
+sponseMapper, method=setDetails, methodDesc=(Lcstderr  : om/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=
+[6], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = SURVIVED
+6:31:25 PM PIT >> FINE : processed mutation in 27 ms.
+6:31stderr  : :25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.cont
+roller.SpringBootExternalSoapServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcstderr  : om/example/spring/bo
+ot/rest/types/EmpDetails;)V], indexes=[5], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator], filename=SpringBootExternalS
+oapServiceResponseMapper.java, block=8, lineNumber=53, description=removed call to comstderr  : /sample/soap/xml/dm/EmpDetails::setEmail, testsInOrder
+=[com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.
+SpringBootExternalSoapServiceControllerTest), com.exstderr  : ample.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryE
+mpConfigs(com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest)]]
+stdout  : 18:31:25.707 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Of selectAllEmpAddrData
+com.sample.soap.xml.dm.SelectAllEmpAllData@61cf3ead
+stdout  : 18:31:25.708 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for selectAllEmpAllData
+6:31:25 PM PIT >> FINE : MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceResponseMap
+per, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=[4], mutator=org.pi
+test.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] SURVIVED
+6:31:25 PM PIT >> FINE : mutating method setDetails
+6:31:25 PM PIT >> FINE : Exit code was - OK
+18:31:25.712 [mutationTestThread] INFO  c.e.s.b.s.c.SpringBootExternalSoapServiceController - SOAP Request Received Ofstdout  :  queryCustomer com.sam
+ple.soap.xml.dm.QueryEmpConfigs@592d41b7
+6:31:25 PM PIT >> FINE : Slave exited ok
+6:31:25 PM PIT >>stderr  :  FINE : 2 relevant test for setDetails
+18:31:25.713 [mutationTestThread] DEBUG c.e.s.b.s.c.SpringBootExternalSoapServiceController - Returning Response for queryEmpConfigs
+6:31:25 PM PIT >> FINE : replaced class with mutant in 9 ms
+6:31:25 PM PIT >> FINE : Running 1 units
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazzstderr  : =com.example.spring.boot.soap.controller.SpringBootExternalSoa
+pServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=
+[5], mutator=org.pitest.mutationtest.engine.stderr  : gregor.mutators.VoidMethodCallMutator] detected = SURVIVED
+6:31:25 PM PIT >> FINE : processed mutation in 28 ms.
+6:31:25 PM PIT >> FINE : Running mutation MutationDetails [id=MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.contrstderr  :
+ oller.SpringBootExternalSoapServiceResponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/dm/EmpDetails;Lcom/example/spring/boot/rest/ty
+pes/EmpDetails;)V], indexes=[4], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutatstderr  : or], filename=SpringBootExternalS
+oapServiceResponseMapper.java, block=8, lineNumber=52, description=removed call to com/sample/soap/xml/dm/EmpDetails::setCity, testsInOrder=[com.examp
+le.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTesstderr  : t.testSelectAllEmpAllData(com.example.spring.boot.soap.controller.S
+pringBootExternalSoapServiceControllerTest), com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceControllerTest.testQueryEmpConfigs(c
+om.example.spring.boot.soap.controller.stderr  : SpringBootExternalSoapServiceControllerTest)]]
+6:31:25 PM PIT >> FINE : mutating method setDetails
+6:31:25 PM PIT >> FINE : 2 relevant test for setDetails
+6:31:25 PM PIT >> FINE : replaced class with mutant in 8 ms
+6:31:25 PM PIT >> FINE : Running 1 unstderr  : its
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> FINE : Mutation MutationIdentifier [location=Location [clazz=com.example.spring.boot.soap.controller.SpringBootExternalSoapServiceRe
+sponseMapper, method=setDetails, methodDesc=(Lcom/sample/soap/xml/stderr  : dm/EmpDetails;Lcom/example/spring/boot/rest/types/EmpDetails;)V], indexes=
+[4], mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator] detected = SURVIVED
+6:31:25 PM PIT >> FINE : processed mutation in 29 ms.
+6:31:25 PM PIT >> FINE : Finished
+6:31:25 PM PIT >> INFO : Completed in 10 seconds
+================================================================================
+- Timings
+================================================================================
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 7 seconds
+--------------------------------------------------------------------------------
+> Total  : 10 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Generated 591 mutations Killed 15 (3%)
+>> Ran 31 tests (0.05 tests per mutation)
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 7 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 7
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 2 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 2
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 172 Killed 5 (3%)
+> KILLED 5 SURVIVED 7 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 160
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator
+>> Generated 222 Killed 6 (3%)
+> KILLED 6 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 214
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 5 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 5
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 183 Killed 4 (2%)
+> KILLED 4 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0
+> NO_COVERAGE 177
+--------------------------------------------------------------------------------
+
+BUILD SUCCESSFUL
+
+Total time: 46.146 secs
+D:\project\development\SpringBootExternalWebService>
+
+***********************************************************************************************************************

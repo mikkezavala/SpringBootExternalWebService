@@ -1,0 +1,40 @@
+***********************************************************************************************************************
+
+19:09:34.363 [http-nio-6065-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - DispatcherServlet with name 'dispatcherServlet' processing POST request for [/api/externalDmCustomer/v1/empConfigAddress]
+19:09:34.364 [http-nio-6065-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Looking up handler method for path /api/externalDmCustomer/v1/empConfigAddress
+19:09:34.366 [http-nio-6065-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<java.util.List<com.example.spring.boot.rest.types.EmpDetails>> com.example.spring.boot.rest.controller.SpringBootExternalRestServiceController.getAllEmpByAddress(com.example.spring.boot.rest.types.EmpAddress)]
+19:09:34.366 [http-nio-6065-exec-5] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'springBootExternalRestServiceController'
+19:09:34.368 [http-nio-6065-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read [class com.example.spring.boot.rest.types.EmpAddress] as "application/json;charset=UTF-8" with [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@702576c5]
+19:09:34.373 [http-nio-6065-exec-5] DEBUG c.e.s.b.r.c.SpringBootExternalRestServiceController - Received Request for getAllEmpByAddress com.example.spring.boot.rest.types.EmpAddress@4e0ec56e 
+19:09:34.374 [http-nio-6065-exec-5] DEBUG c.e.s.b.rest.service.DmServiceImpl - MyServiceImpl::selectAllEmpAllData  address of your sector : Sec49
+19:09:34.374 [http-nio-6065-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+19:09:34.383 [http-nio-6065-exec-5] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+19:09:34.383 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.dao.DmDbServiceImpl -  Query for selectAllEmpAllData : select * from employee where address = ?
+19:09:34.383 [http-nio-6065-exec-5] INFO  c.e.s.b.r.h.SelectAllDmCustomerHandler - External SpringBootRestServiceDemo calling for Post method ...... 
+19:09:34.400 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Created POST request for "http://localhost:6070/multipleCustomer/v1/custDetails"
+19:09:34.401 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Setting request Accept header to [application/json, application/*+json]
+19:09:34.402 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Writing [com.example.multiple.spring.rest.types.CustomerConfigIdentifier@2e135b42] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@9250d15]
+19:09:34.705 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - POST request for "http://localhost:6070/multipleCustomer/v1/custDetails" resulted in 200 (null)
+19:09:34.706 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Reading [class com.example.multiple.spring.rest.types.CustomerDetails] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@9250d15]
+External rest web service request ........................
+returning customer details ..... <200 OK,com.example.multiple.spring.rest.types.CustomerDetails@6898b763,{Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 09 Aug 2017 13:39:34 GMT]}>
+returning customer details ..... 5
+returning customer details ..... Shraddha
+returning customer details ..... G
+returning customer details ..... Sec49
+returning customer details ..... NOIDA
+External rest web service response ........................
+External SpringBootRestServiceDemo <200 OK,com.example.multiple.spring.rest.types.CustomerDetails@6898b763,{Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Wed, 09 Aug 2017 13:39:34 GMT]}>
+19:09:34.711 [http-nio-6065-exec-5] INFO  c.e.s.b.r.h.SelectAllDmCustomerHandler - External SpringBootRestServiceDemo calling for Get method ...... 
+19:09:34.711 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Created GET request for "http://localhost:6070/multipleCustomer/v1/welcome"
+19:09:34.712 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+19:09:34.723 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - GET request for "http://localhost:6070/multipleCustomer/v1/welcome" resulted in 200 (null)
+19:09:34.723 [http-nio-6065-exec-5] DEBUG c.e.s.boot.rest.connector.RestClient - Reading [java.lang.String] as "application/json;charset=UTF-8" using [org.springframework.http.converter.StringHttpMessageConverter@6a2cb4f]
+response of get type request Welcome to our World!
+External SpringBootRestServiceDemo Welcome to our World!
+19:09:34.723 [http-nio-6065-exec-5] DEBUG c.e.s.b.r.c.SpringBootExternalRestServiceController - Returning Response for getAllEmpByAddress
+19:09:34.728 [http-nio-6065-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Written [[com.example.spring.boot.rest.types.EmpDetails@79073635, com.example.spring.boot.rest.types.EmpDetails@6cbdc455, com.example.spring.boot.rest.types.EmpDetails@20dd7e70, com.example.spring.boot.rest.types.EmpDetails@3e1ebf70]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@702576c5]
+19:09:34.728 [http-nio-6065-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+19:09:34.728 [http-nio-6065-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Successfully completed request
+
+***********************************************************************************************************************

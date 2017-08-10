@@ -1,0 +1,59 @@
+***********************************************************************************************************************
+
+Base:- SpringBootExternalWebService
+
+Default port to start:- 6065
+
+Soap Web Service URL:- http://localhost:6065/ExternalDmService/1.0.wsdl
+
+Rest Web Service URL:- http://localhost:6065/api/externalDmCustomer/v1
+
+Post method:-
+
+http://localhost:6065/api/externalDmCustomer/v1/empConfig
+http://localhost:6065/api/externalDmCustomer/v1/empConfigAddress
+
+***********************************************************************************************************************
+
+External Rest web service:- SpringBootRestServiceDemo
+
+Port:- 6070 
+
+URL:- http://localhost:6070/multipleCustomer/v1
+
+Get:- /welcome
+
+Post:- /empConfig, /custDetails, /myCustomer etc.
+
+***********************************************************************************************************************
+
+External Soap web service:- SpringBootSoapServiceDemo
+
+Port:- 8090 
+
+URL:- http://localhost:8090/MathsCalculator/1.0.wsdl
+
+Stub Generation:-  
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+D:\project\development\SpringBootExternalWebService\src>wsimport -keep http://localhost:8090/MathsCalculator/1.0.wsdl
+
+parsing WSDL...
+
+Generating code...
+
+Compiling code...
+
+D:\project\development\SpringBootExternalWebService\src>
+
+Soap Client:-
+
+soapclient.def.mathscalculatorservice.endpoint=http://localhost:8090/MathsCalculator/1.0
+
+***********************************************************************************************************************
+
+Mutation Test:- D:\project\development\SpringBootExternalWebService\build\reports\pitest\201708101313
+
+***********************************************************************************************************************
